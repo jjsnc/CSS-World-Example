@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <p>我叫王小二，字如其名，下面要出现的数字是：</p>
+    <p class="counter"></p>
+</body>
+<style type="text/css">
+.counter {
+  counter-reset: wangxiaoer 2; 
+  counter-increment: wangxiaoer;
+  font-size: 32px; 
+  font-family: Arial black; 
+  color: #cd0000; 
+}
+.counter:before { 
+  content: counter(wangxiaoer,lower-roman)	; 
+  counter-increment: wangxiaoer;
+}
+.counter:after { 
+  content: counter(wangxiaoer); 
+  counter-increment: wangxiaoer;
+}
+</style>
+
+</html>
