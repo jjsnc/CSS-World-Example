@@ -11,7 +11,7 @@
 </body>
 <style type="text/css">
 .counter {
-  counter-reset: wangxiaoer 2; 
+  counter-reset: wangxiaoer 2 wangxiaosan 3 ; 
   counter-increment: wangxiaoer;
   font-size: 32px; 
   font-family: Arial black; 
@@ -22,7 +22,8 @@
   counter-increment: wangxiaoer;
 }
 .counter:after { 
-  content: counter(wangxiaoer); 
+  content: counter(wangxiaoer) '\A' counter(wangxiaosan);
+   white-space: pre;
   counter-increment: wangxiaoer;
 }
 </style>
