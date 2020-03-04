@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h3>“包含块”导致绝对定位元素一柱擎天问题实例页面</h3>
+    <a href="javascript:" class="icon-delete" title="删除">删除</a>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: auto;
+}
+
+.demo {
+    padding: 4em 4px;
+    text-align: right;
+}
+
+.ui_tips .ui_tips_before,
+.ui_tips .ui_tips_after {
+    display: none;
+    position: absolute;
+    left: 50%;
+    white-space: nowrap;
+}
+
+.ui_tips_before {
+    top: -42px;
+    max-width: 250px;
+    padding: 6px 10px;
+    line-height: 18px;
+    border-radius: 2px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    text-align: left;
+}
+
+.ui_tips_after {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: 6px solid transparent;
+    border-top-color: #333;
+    top: -12px;
+}
+
+.ui_tips:hover .ui_tips_before,
+.ui_tips:hover .ui_tips_after {
+    display: block;
+}
+
+/* 下面是JS创建的tips效果 */
+.ui_tips_x {
+    text-align: center;
+    position: absolute;
+    z-index: 99;
+}
+
+.ui_tips_x .ui_tips_before {
+    display: block;
+}
+
+.ui_tips_x .ui_tips_after {
+    display: block;
+    *display: inline-block;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.icon-delete {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('https://demo.cssworld.cn/images/6/delete@2x.png') no-repeat center;
+    background: url('https://demo.cssworld.cn/images/6/delete@2x.png') no-repeat center, none;
+    background-size: 16px;
+    color: transparent;
+    font-size: 0;
+}
+</style>
+
+</html>

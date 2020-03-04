@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>clear:both导致两栏自适应布局错位实例页面</h6>
+    <div class="father">
+        <img src="../images/1.jpeg">
+        <div class="animal">
+            小猫1，小猫2，
+            <div class="clear"></div>
+            小猫3，小猫4，小猫5，小猫6，小狗1，小狗2，小狗3，小狗4，小狗5，小狗6
+        </div>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.father {
+    border: 1px solid #444;
+    overflow: hidden;
+}
+
+.father>img {
+    width: 60px;
+    height: 64px;
+    float: left;
+}
+
+.animal {
+    margin-left: 70px;
+}
+
+.clear {
+    clear: both;
+}
+</style>
+
+</html>

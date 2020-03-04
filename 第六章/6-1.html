@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="table">
+        <div class="td">
+            <h4>使用margin定位</h4>
+            <img src="../images/1.jpg" onclick="this.className='pk-1';" width="100">
+            <p>点击图片应用<code>.pk-1</code></p>
+        </div>
+        <div class="td">
+            <h4>使用relative定位</h4>
+            <img src="../images/1.jpg" onclick="this.className='pk-2';" width="100">
+            <p>点击图片应用<code>.pk-2</code></p>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+	margin: 100px;
+    width: 300px;
+    display: inline-table;
+    table-layout: fixed;
+}
+
+.td {
+    display: table-cell;
+}
+
+.pk-1 {
+    margin-top: -50px;
+}
+
+.pk-2 {
+    position: relative;
+    top: -50px;
+}
+</style>
+
+</html>

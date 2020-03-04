@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>利用float破坏流特性的两栏自适应布局实例页面</h6>
+    <div class="father">
+        <img src="../images/1.jpeg">
+        <p class="girl">美女1，美女2，美女3，美女4，美女5，美女6，后宫1，后宫2，后宫3，后宫4，后宫5，后宫6</p>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.father {
+    border: 1px solid #444;
+    overflow: hidden;
+}
+
+.father>img {
+    width: 60px;
+    height: 64px;
+    float: left;
+}
+
+.girl {
+    /* 环绕和自适应的区别所在 */
+    margin-left: 70px;
+}
+</style>
+
+</html>

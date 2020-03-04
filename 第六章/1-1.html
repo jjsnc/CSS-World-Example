@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <!-- 高度限制下依然发生float环绕效果实例页面 -->
+    <div class="father">
+        <div class="float">
+            <img src="../images/1.jpeg">
+        </div>
+        我是帅哥，好巧啊，我也是帅哥，原来看这本书的人都是帅哥~
+    </div>
+    <div>虽然你很帅，但是我对你不感兴趣。</div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.father {
+    height: 64px;
+    border: 1px solid #444;
+}
+
+.float {
+    float: left;
+}
+
+.float img {
+    width: 60px;
+    height: 64px;
+}
+</style>
+
+</html>

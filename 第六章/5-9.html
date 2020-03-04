@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>text-align和absolute定位全兼容版本实例页面</h6>
+    <h4>全兼容版本</h4>
+    <p class="compa"><img src="../images/1.jpg" width="50"></p>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    width: 300px;
+    height: 120px;
+    background-color: #eef0f6;
+    text-align: center;
+}
+
+img {
+    position: absolute;
+}
+
+/* IE兼容处理 */
+.compa {
+    font-size: .1px;
+    font-size: -webkit-calc(1px - 1px);
+}
+
+.compa:before {
+    content: "\2002";
+}
+</style>
+
+</html>

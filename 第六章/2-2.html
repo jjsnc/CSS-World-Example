@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+	<!-- clear:both下依然发生float环绕效果实例页面 -->
+	<h6>clear:both 依然发生布局错位示意图</h6>
+    <div class="father">
+        <img src="../images/1.jpeg">
+        我是帅哥，好巧啊，我也是帅哥，原来看这本书的人都是帅哥~
+    </div>
+    <div>虽然你很帅，但是我对你不敢兴趣。</div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.father {
+    border: 1px solid #444;
+}
+
+.father:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.father img {
+    float: left;
+    width: 60px;
+    height: 64px;
+}
+
+.father+div {
+    margin-top: -2px;
+}
+</style>
+
+</html>

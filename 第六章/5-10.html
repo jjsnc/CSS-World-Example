@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="constr">
+        <div class="alignright">
+            <span class="follow">
+                <img src="https://demo.cssworld.cn/images/6/circle.png">
+                <img src="https://demo.cssworld.cn/images/6/backtop.png">
+            </span>
+        </div>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.constr {
+    width: 80%;
+    margin: auto;
+    background-color: #f0f3f9;
+}
+
+.alignright {
+    height: 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+.alignright:before {
+    content: "\2002";
+}
+
+.follow {
+    position: fixed;
+    bottom: 100px;
+    z-index: 1;
+}
+
+.follow>img {
+    display: block;
+    margin: 10px;
+}
+</style>
+
+</html>
