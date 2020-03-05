@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+	边框类型：<select class="monospaced">
+    <option value="solid" selected>———————</option>
+    <option value="dashed">-------</option>
+    <option value="dotted">·······</option>
+</select>
+
+<div id="border" class="border"></div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.monospaced {
+    width: 110px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: -.2px;
+}
+
+.border {
+    width: 120px; height: 40px;
+    border: 10px solid #cd0000;
+    margin: 30px auto 10px;
+}
+</style>
+
+</html>

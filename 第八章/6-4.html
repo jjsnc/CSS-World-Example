@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>letter-spacing与字符动效实例页面</h6>
+    <div class="title">我是标题文字内容</div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    width: 8em;
+    margin: auto;
+    white-space: nowrap;
+    animation: textIn 1s both;
+}
+
+@keyframes textIn {
+    0% {
+        opacity: 0;
+        letter-spacing: -200px;
+    }
+
+    60% {
+        letter-spacing: 5px;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 0;
+    }
+}
+</style>
+
+</html>

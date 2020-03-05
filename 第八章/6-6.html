@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="box" class="box">
+        <ul>
+            <li><img src="../images/1.jpg"></li>
+            <li><img src="../images/1.jpg"></li>
+            <li><img src="../images/1.jpg"></li>
+        </ul>
+        <a id="prev" class="btn btn-prev">往前</a>
+        <a href="javascript:" id="next" class="btn btn-next">往后</a>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.box>ul {
+    position: absolute;
+    left: 0;
+    transition: left .2s;
+    white-space: nowrap;
+}
+
+.box>ul>li {
+    display: inline-block;
+}
+
+.box img {
+    width: 128px;
+    height: 96px;
+}
+
+.btn {
+    position: absolute;
+    font-size: 12px;
+    background: white;
+    padding: 2px 5px;
+    top: 40px;
+}
+
+.btn {
+    opacity: .95;
+    color: #999;
+}
+
+.btn[href] {
+    color: #333;
+}
+
+.btn-prev {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
+</style>
+<script type="text/javascript">
+var elePrev = document.getElementById('prev'),
+    eleNext = document.getElementById('next');
+
+var eleBox = document.getElementById('box');
+var eleUl = eleBox.querySelector('ul');
+
+if (elePrev && eleNext && eleBox && eleUl) {
+    var maxX = eleBox.clientWidth - eleBox.scrollWidth;
+
+    elePrev.onclick = function() {
+        var href = elePrev.getAttribute('href');
+        if (href) {
+            eleUl.style.left = '0px';
+            elePrev.removeAttribute('href');
+            eleNext.setAttribute('href', 'javascript:');
+        }
+    };
+    eleNext.onclick = function() {
+        var href = eleNext.getAttribute('href');
+        if (href) {
+            eleUl.style.left = maxX + 'px';
+            eleNext.removeAttribute('href');
+            elePrev.setAttribute('href', 'javascript:');
+        }
+    };
+}
+</script>
+
+</html>

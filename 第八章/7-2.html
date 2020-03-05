@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <h4><strong>请选择display的属性值：</strong><select id="selectDisplay">
+                <option value="inline" selected="">inline</option>
+                <option value="block">block</option>
+                <option value="inline-block">inline-block</option>
+                <option value="list-item">list-item</option>
+                <option value="table">table</option>
+                <option value="inline-table">inline-table</option>
+                <option value="table-caption">table-caption</option>
+                <option value="table-row">table-row</option>
+                <option value="table-cell">table-cell</option>
+                <option value="flex">flex</option>
+            </select></h4>
+        <p><span>第一行</span>字符看看会不会变红？</p>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 300px;
+    margin: 20px auto;
+}
+
+p {
+    margin: 1em 0;
+}
+
+p:first-line {
+    color: red;
+}
+</style>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>动态font-size下的图片垂直居中效果实例页面</h6>
+    <p>文字 <img src="https://demo.cssworld.cn/images/8/delete@2x.png"></p>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 14px;
+    animation: fontSize 5s 1 alternate ease-in-out;
+}
+
+p>img {
+    width: 16px;
+    height: 16px;
+    /* 下面的ex实现是为了方便大家对比效果 */
+    /* vertical-align: .6ex; */
+    vertical-align: 25%;
+    position: relative;
+    top: 8px;
+}
+
+@keyframes fontSize {
+    to {
+        font-size: 60px;
+    }
+}
+</style>
+
+</html>

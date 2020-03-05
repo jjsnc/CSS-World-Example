@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>一行列表内容的两端对齐效果实例页面</h6>
+    <ul class="justify">
+        <li>
+            <img src="../images/1.jpg">
+            <p>图标描述1</p>
+        </li>
+        <li>
+            <img src="../images/1.jpg">
+            <p>图标描述2</p>
+        </li>
+    </ul>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.justify {
+    background-color: #f0f3f9;
+    text-align: justify;
+    font-size: .1px;
+    font-size: -webkit-calc(0px + 0px);
+}
+
+.justify:after {
+    content: "";
+    display: inline-table;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.justify img {
+    width: 128px;
+    height: 96px;
+    vertical-align: top;
+}
+
+.justify li {
+    display: inline-block;
+    width: 128px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.justify p {
+    margin-top: .5em;
+}
+</style>
+<script type="text/javascript">
+var eleBox = document.querySelector('.justify');
+if (eleBox) {
+    eleBox.onclick = function() {
+        this.parentNode.style.width = Math.round(260 + (Math.min(screen.width, 400) - 260) * Math.random()) + 'px';
+    };
+}
+</script>
+
+</html>
