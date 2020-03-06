@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>outline与底部填满屏幕的大面积色块实例页面</h6>
+    <div class="footer">
+        <p>Designed &amp; Powered by zhangxinxu</p>
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    height: 50px;
+}
+
+.footer>p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #a0b3d6;
+    outline: 9999px solid #a0b3d6;
+    clip: rect(0 9999px 9999px 0);
+}
+</style>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>CSS writing-mode与兼容的图标旋转效果实例页面</h6>
+    <p><strong>默认流</strong></p>
+    <span class="icon-play">r</span> 箭头朝右
+    <p><strong>垂直流</strong></p>
+    <span class="icon-play verticle-mode">r</span> 箭头朝下
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: Arrow;
+    src: url("../fonts/arrow.eot?");
+    src: local("Any"),
+         url("../fonts/arrow.woff") format("woff"),
+         url("../fonts/arrow.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-play {
+    font-family: Arrow;
+}
+
+.verticle-mode {
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+}
+</style>
+<script type="text/javascript"></script>
+
+</html>

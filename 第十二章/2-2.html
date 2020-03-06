@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>CSS writing-mode与图片margin:auto垂直居中实例页面</h6>
+    <p><strong>默认流-margin-top:auto;margin-bottom:auto不居中</strong></p>
+    <div class="box">
+        <img src="../images/1.jpg" class="auto">
+    </div>
+    <p><strong>垂直流-margin-top:auto;margin-bottom:auto垂直居中</strong></p>
+    <div class="box verticle-mode">
+        <img src="../images/1.jpg" class="auto">
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    height: 240px;
+    width: 300px;
+    background-color: #f0f3f9;
+    overflow: hidden;
+}
+
+.auto {
+    display: block;
+    width: 256px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.verticle-mode {
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+</style>
+
+</html>

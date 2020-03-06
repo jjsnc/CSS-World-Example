@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>
+        CSS unicode-bidi:embed和unicode-bidi:normal对比实例页面
+    </h6>
+    <p class="rtl">
+        开头是我，
+        <span style="unicode-bidi:normal;">
+            这是中间
+        </span>，
+        然后是结束
+    </p>
+    <p class="rtl">
+        开头是我，
+        <span style="unicode-bidi:embed;">
+            这是中间
+        </span>，
+        然后是结束
+    </p>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.rtl {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.rtl>span {
+    background-color: #ddd;
+}
+</style>
+
+</html>

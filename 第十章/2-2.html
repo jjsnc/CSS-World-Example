@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>visibility:hidden，display:none和CSS计数器关系实例页面</h6>
+    <ol>
+        <li>列表</li>
+        <li class="dn">列表</li>
+        <li>列表</li>
+        <li>列表</li>
+    </ol>
+    <ol>
+        <li>列表</li>
+        <li class="vh">列表</li>
+        <li>列表</li>
+        <li>列表</li>
+    </ol>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.vh {
+    visibility: hidden;
+}
+
+.dn {
+    display: none;
+}
+
+ol {
+    border: 1px solid;
+    margin: 1em 0;
+    counter-reset: test;
+}
+
+li:after {
+    counter-increment: test;
+    content: counter(test);
+}
+</style>
+
+</html>

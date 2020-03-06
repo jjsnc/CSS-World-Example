@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h6>CSS writing-mode与图片text-align:center垂直居中实例页面</h6>
+    <strong>默认流</strong>
+    <div class="box">
+        <img src="https://demo.cssworld.cn/images/common/m/1.jpg">
+    </div>
+    <strong>垂直流</strong>
+    <div class="box verticle-mode">
+        <img src="https://demo.cssworld.cn/images/common/m/1.jpg">
+    </div>
+</body>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 300px;
+    height: 240px;
+    background-color: #f0f3f9;
+
+    text-align: center;
+}
+
+.verticle-mode {
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+</style>
+
+</html>
